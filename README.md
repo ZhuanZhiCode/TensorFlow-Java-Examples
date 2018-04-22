@@ -16,7 +16,7 @@ Examples of Invoking TensorFlow from Java
 虽然使用TensorFlow官方Java API可以直接对接训练好的pb模型，但在实际使用中，依然存在着与跨语种对接相关的繁琐代码。例如虽然已有使用Python编写好的基于TensorFlow的文本分类代码，但TensorFlow Java API的输入需要是量化的文本，这样我们又需要用Java重新实现在Python代码中已经实现的分词、从字符串到索引的转换等预处理操作（这些操作同时依赖于Python代码依赖的单词表等数据）。另外，由于Java没有numpy支持，在构建多维数组作为输入时，使用的依然是类似循环的操作，非常繁琐。
 
 
-[KerasServer](https://github.com/CrawlScript/KerasServer)]支持restful交互，因此可以支持用任何程序语言调用TensorFlow/Keras。由于KerasServer的服务端提供Python API, 因此可以直接将已有的TensorFlow/Keras Python代码和模型转换为KerasServer API，供Java/c/c++/C#/Python/NodeJS/Browser Javascript等调用，而不需要再其他语种中进行繁琐的数据预处理操作。例如，Java可直接将需要分类的文本数据提交给KerasServer，KerasServer可利用已有的Python代码对字符串进行分词、预处理等操作。
+[KerasServer](https://github.com/CrawlScript/KerasServer)支持restful交互，因此可以支持用任何程序语言调用TensorFlow/Keras。由于KerasServer的服务端提供Python API, 因此可以直接将已有的TensorFlow/Keras Python代码和模型转换为KerasServer API，供Java/c/c++/C#/Python/NodeJS/Browser Javascript等调用，而不需要再其他语种中进行繁琐的数据预处理操作。例如，Java可直接将需要分类的文本数据提交给KerasServer，KerasServer可利用已有的Python代码对字符串进行分词、预处理等操作。
 
 
 
